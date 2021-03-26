@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="skip">跳过</string>
+    <string name="clock">时钟页面</string>
+    <string name="splash_tips">3秒后跳转到主页面</string>
+    <string name="splash_activity">SplashActivity</string>
+    <string name="main_activity">MainActivity</string>
+    <string name="start_download">开始下载</string>
+    <string name="download_success">下载成功</string>
+    <string name="download_fail">下载失败</string>
+    <string name="download_progress">下载进度: %d</string>
+
+</resources>
