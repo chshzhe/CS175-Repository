@@ -23,6 +23,21 @@ public class DebugActivity extends AppCompatActivity {
 
     private static int REQUEST_CODE_STORAGE_PERMISSION = 1001;
 
+    private static String getCanonicalPath(Map<String, File> dirMap) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            for (String name : dirMap.keySet()) {
+                sb.append(name)
+                        .append(": ")
+                        .append(dirMap.get(name).getCanonicalPath())
+                        .append('\n');
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,20 +116,5 @@ public class DebugActivity extends AppCompatActivity {
         dirMap.put("picturesDir",
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES));
         return getCanonicalPath(dirMap);
-    }
-
-    private static String getCanonicalPath(Map<String, File> dirMap) {
-        StringBuilder sb = new StringBuilder();
-        try {
-            for (String name : dirMap.keySet()) {
-                sb.append(name)
-                        .append(": ")
-                        .append(dirMap.get(name).getCanonicalPath())
-                        .append('\n');
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return sb.toString();
     }
 }

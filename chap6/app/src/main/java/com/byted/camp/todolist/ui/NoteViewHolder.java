@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.byted.camp.todolist.NoteActivity;
 import com.byted.camp.todolist.NoteOperator;
@@ -24,20 +23,16 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
 
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT =
             new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss", Locale.ENGLISH);
-
     private final NoteOperator operator;
-
+    public View noteView;
     private CheckBox checkBox;
     private TextView contentText;
     private TextView dateText;
     private View deleteBtn;
 
-    public View noteView;
-
     public NoteViewHolder(@NonNull View itemView, NoteOperator operator) {
         super(itemView);
         this.operator = operator;
-
         checkBox = itemView.findViewById(R.id.checkbox);
         contentText = itemView.findViewById(R.id.text_content);
         dateText = itemView.findViewById(R.id.text_date);
@@ -70,12 +65,8 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
         noteView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(v.getContext(), "点击:" + note.id + "\t" + note.getContent(),
-                        Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(contentText.getContext(), NoteActivity.class);
-                //传递note的id
-                intent.putExtra("isUpdateActivity", true);  //是否是更新界面
+                intent.putExtra("isUpdateActivity", true);
                 intent.putExtra("note_id", note.id);
                 intent.putExtra("content", note.getContent());
                 intent.putExtra("priority", note.getPriority().intValue);
@@ -91,7 +82,6 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
             contentText.setTextColor(Color.BLACK);
             contentText.setPaintFlags(contentText.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
         }
-
         itemView.setBackgroundColor(note.getPriority().color);
     }
 }

@@ -17,7 +17,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.byted.camp.todolist.beans.Note;
 import com.byted.camp.todolist.beans.Priority;
 import com.byted.camp.todolist.beans.State;
 import com.byted.camp.todolist.db.TodoContract.TodoNote;
@@ -58,12 +57,10 @@ public class NoteActivity extends AppCompatActivity {
         lowRadio.setChecked(true);
 
 
-        //是否是更新界面
         final boolean isUpdateActivity = getIntent().getBooleanExtra("isUpdateActivity", false);
         final long note_id = getIntent().getLongExtra("note_id", -1);
         String originContent = getIntent().getStringExtra("content");
         Priority originPriority = Priority.from(getIntent().getIntExtra("priority", 0));
-        //设置编辑界面中编辑框和多选框的默认值是原来的note值
         editText.setText(originContent);
         radioGroup.clearCheck();
         int radio_id;
@@ -87,16 +84,12 @@ public class NoteActivity extends AppCompatActivity {
                 }
 
                 if (isUpdateActivity) {
-                    //跳转到mainActivity,并要求main更新
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("shouldUpdate", true);
                     intent.putExtra("note_id", note_id);
                     intent.putExtra("content", content.toString());
                     intent.putExtra("priority", getSelectedPriority().intValue);
-
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(),
-                            "更新提交:" + note_id + "\t" + content + "\t" + getSelectedPriority(), Toast.LENGTH_LONG).show();
 
                 } else {
                     boolean succeed = saveNote2Database(content.toString().trim(),

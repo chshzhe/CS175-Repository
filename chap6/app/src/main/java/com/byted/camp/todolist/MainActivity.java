@@ -15,12 +15,9 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.byted.camp.todolist.beans.Note;
 import com.byted.camp.todolist.beans.Priority;
@@ -90,35 +87,44 @@ public class MainActivity extends AppCompatActivity {
 
 
         SharedPreferences sharedPreferences = getPreferences(Context.MODE_PRIVATE);
-        int openTimes = sharedPreferences.getInt("openTimes", 0); //找不到时，默认值是0
+        int openTimes = sharedPreferences.getInt("openTimes", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("openTimes", ++openTimes);
         editor.apply();
-        String str = getResources().getString(R.string.app_name);
+        String str = "todo";
         setTitle(str + " " + Integer.toString(openTimes));
 
 
-        //得到来自noteActivity的新note,并更新
         if (getIntent().getBooleanExtra("shouldUpdate", false)) {
             long note_id = getIntent().getLongExtra("note_id", -1);
             String content = getIntent().getStringExtra("content");
             Priority priority = Priority.from(getIntent().getIntExtra("priority", 0));
-            Toast.makeText(getApplicationContext(),
-                    "更新开始" + note_id + "\t" + content + "\t" + priority, Toast.LENGTH_LONG).show();
             if (note_id != -1) {
-                Toast.makeText(getApplicationContext(),
-                        "更新成功" + note_id + "\t" + content + "\t" + priority, Toast.LENGTH_LONG).show();
                 Note note = new Note(note_id);
                 note.setContent(content);
                 note.setPriority(priority);
-
                 updateNoteContent(note);
             } else {
-                Toast.makeText(getApplicationContext(),
-                        "更新失败", Toast.LENGTH_SHORT).show();
+
             }
         }
 
+    }
+
+    private void updateNoteContent(Note note) {
+        if (database == null) {
+            return;
+        }
+        ContentValues values = new ContentValues();
+        values.put(TodoNote.COLUMN_CONTENT, note.getContent());
+        values.put(TodoNote.COLUMN_PRIORITY, note.getPriority().intValue);
+
+        int rows = database.update(TodoNote.TABLE_NAME, values,
+                TodoNote._ID + "=?",
+                new String[]{String.valueOf(note.id)});
+        if (rows > 0) {
+            notesAdapter.refresh(loadNotesFromDatabase());
+        }
     }
 
     @Override
@@ -214,22 +220,6 @@ public class MainActivity extends AppCompatActivity {
         }
         ContentValues values = new ContentValues();
         values.put(TodoNote.COLUMN_STATE, note.getState().intValue);
-
-        int rows = database.update(TodoNote.TABLE_NAME, values,
-                TodoNote._ID + "=?",
-                new String[]{String.valueOf(note.id)});
-        if (rows > 0) {
-            notesAdapter.refresh(loadNotesFromDatabase());
-        }
-    }
-
-    private void updateNoteContent(Note note) {
-        if (database == null) {
-            return;
-        }
-        ContentValues values = new ContentValues();
-        values.put(TodoNote.COLUMN_CONTENT, note.getContent());
-        values.put(TodoNote.COLUMN_PRIORITY, note.getPriority().intValue);
 
         int rows = database.update(TodoNote.TABLE_NAME, values,
                 TodoNote._ID + "=?",
