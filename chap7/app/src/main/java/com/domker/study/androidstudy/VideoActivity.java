@@ -16,6 +16,7 @@ public class VideoActivity extends AppCompatActivity {
     private VideoView videoView;
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,6 @@ public class VideoActivity extends AppCompatActivity {
         videoView.setMediaController(mMediaController);
 
     }
-
     private String getVideoPath(int resId) {
         return "android.resource://" + this.getPackageName() + "/" + resId;
     }

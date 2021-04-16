@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.domker.study.androidstudy">
-
     <uses-permission android:name="android.permission.INTERNET" />
     <!--写入SD卡的权限-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,8 +11,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -28,10 +27,7 @@
         <activity android:name=".FrescoImageActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".GlideActivity" />
-        <activity
-            android:name=".MediaPlayerActivity"
-            android:configChanges="orientation|keyboardHidden" />
-
+        <activity android:name=".MediaPlayerActivity" android:configChanges="orientation|keyboardHidden" />
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.domker.study.androidstudy.fileprovider"

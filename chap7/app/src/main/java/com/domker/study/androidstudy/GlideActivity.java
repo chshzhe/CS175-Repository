@@ -6,11 +6,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-
+import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,9 +39,9 @@ public class GlideActivity extends AppCompatActivity {
         //ImageView imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
         ZoomImageView imageView = (ZoomImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
         Glide.with(this)
-                .load(resId)
-                .error(R.drawable.error)
-                .into(imageView);
+            .load(resId)
+            .error(R.drawable.error)
+            .into(imageView);
         pages.add(imageView);
     }
 
@@ -50,12 +49,12 @@ public class GlideActivity extends AppCompatActivity {
         //ImageView imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
         ZoomImageView imageView = (ZoomImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
         Glide.with(this)
-                .load(path)
-                .apply(new RequestOptions().circleCrop().diskCacheStrategy(DiskCacheStrategy.ALL))
-                .error(R.drawable.error)
-                //.transition(withCrossFade(4000))
-                //.override(100, 100)
-                .into(imageView);
+            .load(path)
+            .apply(new RequestOptions().circleCrop().diskCacheStrategy(DiskCacheStrategy.ALL))
+            .error(R.drawable.error)
+            //.transition(withCrossFade(4000))
+            //.override(100, 100)
+            .into(imageView);
         pages.add(imageView);
     }
 }

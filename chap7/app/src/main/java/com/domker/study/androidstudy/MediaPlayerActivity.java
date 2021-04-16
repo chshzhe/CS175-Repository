@@ -1,6 +1,12 @@
 package com.domker.study.androidstudy;
 
 import android.app.ActionBar;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.PixelFormat;
 import android.media.MediaPlayer;
@@ -17,6 +23,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -29,21 +36,27 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MediaPlayerActivity extends AppCompatActivity {
-    private static final int HIDDEN_TIME = 5000;
-    private final static int WHAT = 0;
     private SurfaceView surfaceView;
     private MediaPlayer player;
     private SurfaceHolder holder;
+
     private View controllerView;
     private PopupWindow popupWindow;
+
     private ImageView imageView_play;
     private ImageView imageView_fullscreen;
     private SeekBar seekBar;
     private TextView textView_playTime;
     private TextView textView_duration;
+
     private float densityRatio = 1.0f;
+
     private int videoheight = 400;
+    private static final int HIDDEN_TIME = 5000;
+
     private Timer timer = null;
+    private final static int WHAT = 0;
+
     private Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             switch (msg.what) {
@@ -67,21 +80,20 @@ public class MediaPlayerActivity extends AppCompatActivity {
                 default:
                     break;
             }
-        }
-
-        ;
-    };
-    private Runnable r = new Runnable() {
-        @Override
-        public void run() {
-            showOrHiddenController();
-        }
+        };
     };
 
     private String formatTime(long time) {
         SimpleDateFormat formatter = new SimpleDateFormat("mm:ss");
         return formatter.format(new Date(time));
     }
+
+    private Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            showOrHiddenController();
+        }
+    };
 
     private void showOrHiddenController() {
         if (popupWindow.isShowing()) {
@@ -100,6 +112,8 @@ public class MediaPlayerActivity extends AppCompatActivity {
         setTitle("MediaPlayer");
         setContentView(R.layout.layout_media_player);
         surfaceView = findViewById(R.id.surfaceView);
+
+
 
 
         player = new MediaPlayer();
@@ -192,6 +206,23 @@ public class MediaPlayerActivity extends AppCompatActivity {
         }
     }
 
+    private class PlayerCallBack implements SurfaceHolder.Callback {
+        @Override
+        public void surfaceCreated(SurfaceHolder holder) {
+            player.setDisplay(holder);
+        }
+
+        @Override
+        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+        }
+
+        @Override
+        public void surfaceDestroyed(SurfaceHolder holder) {
+
+        }
+    }
+
     private void initController() {
 
         controllerView = getLayoutInflater().inflate(
@@ -218,7 +249,6 @@ public class MediaPlayerActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 handler.postDelayed(r, HIDDEN_TIME);
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 handler.removeCallbacks(r);
@@ -254,7 +284,7 @@ public class MediaPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MediaPlayerActivity.this, "点击全屏", Toast.LENGTH_SHORT);
-                Log.d("this", String.valueOf(getRequestedOrientation()));
+                Log.d("this",String.valueOf(getRequestedOrientation()));
                 if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
                     MediaPlayerActivity.this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     imageView_fullscreen
@@ -266,7 +296,7 @@ public class MediaPlayerActivity extends AppCompatActivity {
                     surfaceView.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                     surfaceView.getLayoutParams().height = videoheight;
 
-                } else if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT || getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED) {
+                } else if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT|| getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED) {
                     MediaPlayerActivity.this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                     imageView_fullscreen
                             .setImageResource(R.drawable.video_inner_screen);
@@ -281,23 +311,6 @@ public class MediaPlayerActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private class PlayerCallBack implements SurfaceHolder.Callback {
-        @Override
-        public void surfaceCreated(SurfaceHolder holder) {
-            player.setDisplay(holder);
-        }
-
-        @Override
-        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-        }
-
-        @Override
-        public void surfaceDestroyed(SurfaceHolder holder) {
-
-        }
     }
 }
 

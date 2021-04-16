@@ -7,14 +7,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +31,7 @@ public class FrescoImageActivity extends AppCompatActivity {
         pager = (ViewPager) findViewById(R.id.view_pager);
         addImage("res:/" + R.drawable.drawableimage);
 
-        Uri sdcardUri = Uri.fromFile(new File("/sdcard/fileimage.jpg"));// For files on device
+        Uri sdcardUri= Uri.fromFile(new File("/sdcard/fileimage.jpg"));// For files on device
         addImage(sdcardUri);
 
         addImage("asset:/assetsimage.jpg");
@@ -49,8 +47,8 @@ public class FrescoImageActivity extends AppCompatActivity {
         SimpleDraweeView imageView = (SimpleDraweeView) layoutInflater.inflate(R.layout.activity_fresco_item, null);
         imageView.setImageURI(uri);
         imageView
-                .getHierarchy()
-                .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER);
+            .getHierarchy()
+            .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER);
         pages.add(imageView);
     }
 
@@ -58,16 +56,16 @@ public class FrescoImageActivity extends AppCompatActivity {
         addImage(Uri.parse(path));
     }
 
-    private void addRawImage(int resId) {
+    private void addRawImage(int resId){
         ImageRequest imageRequest = ImageRequestBuilder.newBuilderWithResourceId(resId).build();
         DraweeController controller = Fresco.newDraweeControllerBuilder()
-                .setUri(imageRequest.getSourceUri())
-                .setAutoPlayAnimations(true)
-                .build();
+            .setUri(imageRequest.getSourceUri())
+            .setAutoPlayAnimations(true)
+            .build();
         SimpleDraweeView imageView = (SimpleDraweeView) layoutInflater.inflate(R.layout.activity_fresco_item, null);
         imageView
-                .getHierarchy()
-                .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER);
+            .getHierarchy()
+            .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER);
         imageView.setController(controller);
         pages.add(imageView);
     }

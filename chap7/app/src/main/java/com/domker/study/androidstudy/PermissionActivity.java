@@ -1,21 +1,19 @@
 package com.domker.study.androidstudy;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-public class PermissionActivity extends AppCompatActivity {
-    private final static int REQUEST_PERMISSION = 123;
-    private String[] mPermissionsArrays = new String[]{
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-    };
+import java.util.Arrays;
 
+public class PermissionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +28,20 @@ public class PermissionActivity extends AppCompatActivity {
                     }
                 } else {
                     Toast.makeText(PermissionActivity.this, "已经获取所有所需权限", Toast.LENGTH_SHORT)
-                            .show();
+                        .show();
                 }
             }
         });
     }
+
+
+    private String[] mPermissionsArrays = new String[] {
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+    };
+
+    private final static int REQUEST_PERMISSION = 123;
+
 
     private boolean checkPermissionAllGranted(String[] permissions) {
         // 6.0以下不需要
@@ -59,7 +66,7 @@ public class PermissionActivity extends AppCompatActivity {
         if (requestCode == REQUEST_PERMISSION) {
             for (int i = 0; i < permissions.length; i++) {
                 if (grantResults.length > i &&
-                        grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                    grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                     Toast.makeText(this, "已经授权" + permissions[i], Toast.LENGTH_LONG).show();
                 }
             }

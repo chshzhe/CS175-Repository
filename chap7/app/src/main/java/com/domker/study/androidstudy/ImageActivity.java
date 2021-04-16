@@ -1,5 +1,6 @@
 package com.domker.study.androidstudy;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
@@ -17,7 +18,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,27 +31,6 @@ public class ImageActivity extends AppCompatActivity {
     ViewPager pager = null;
     LayoutInflater layoutInflater = null;
     List<View> pages = new ArrayList<View>();
-
-    public static byte[] inputStreamToByteArray(InputStream in) {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        byte[] buffer = new byte[1024];
-        int len;
-        try {
-            while ((len = in.read(buffer)) != -1) {
-                outputStream.write(buffer, 0, len);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                in.close();
-                outputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return outputStream.toByteArray();
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -79,6 +58,80 @@ public class ImageActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private class ReadRawTask extends AsyncTask<Integer, Void, Bitmap> {
+        int mWidth = 0;
+        int mHeight = 0;
+        ImageView imageView;
+
+        ReadRawTask(int width, int height) {
+            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
+            pages.add(imageView);
+            mWidth = width;
+            mHeight = height;
+        }
+
+        @Override
+        protected Bitmap doInBackground(Integer... integers) {
+            return decodeBitmapFromRaw(ImageActivity.this.getResources(), integers[0], mWidth, mHeight);
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            addImageAsyn(imageView, bitmap);
+        }
+    }
+
+    private class ReadFileTask extends AsyncTask<String, Void, Bitmap> {
+        int mWidth = 0;
+        int mHeight = 0;
+        ImageView imageView;
+
+        ReadFileTask(int width, int height) {
+            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
+            pages.add(imageView);
+            mWidth = width;
+            mHeight = height;
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... strings) {
+            return decodeBitmapFromFile(strings[0],
+                    mWidth,
+                    mHeight);
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            addImageAsyn(imageView, bitmap);
+        }
+    }
+
+    private class ReadAssetsTask extends AsyncTask<String, Void, Bitmap> {
+        int mWidth = 0;
+        int mHeight = 0;
+        ImageView imageView;
+
+        ReadAssetsTask(int width, int height) {
+            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
+            pages.add(imageView);
+            mWidth = width;
+            mHeight = height;
+        }
+
+        @Override
+        protected Bitmap doInBackground(String... strings) {
+            return decodeBitmapFromAssets(ImageActivity.this,
+                    strings[0],
+                    mWidth,
+                    mHeight);
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            addImageAsyn(imageView, bitmap);
+        }
     }
 
     private void loadNetImage(final int width, final int height) {
@@ -146,6 +199,27 @@ public class ImageActivity extends AppCompatActivity {
         } else {
             return null;
         }
+    }
+
+    public static byte[] inputStreamToByteArray(InputStream in) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int len;
+        try {
+            while ((len = in.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, len);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                in.close();
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return outputStream.toByteArray();
     }
 
     private Bitmap decodeBitmapFromVectorResource(int resId) {
@@ -246,80 +320,6 @@ public class ImageActivity extends AppCompatActivity {
             }
         }
         return inSampleSize;
-    }
-
-    private class ReadRawTask extends AsyncTask<Integer, Void, Bitmap> {
-        int mWidth = 0;
-        int mHeight = 0;
-        ImageView imageView;
-
-        ReadRawTask(int width, int height) {
-            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
-            pages.add(imageView);
-            mWidth = width;
-            mHeight = height;
-        }
-
-        @Override
-        protected Bitmap doInBackground(Integer... integers) {
-            return decodeBitmapFromRaw(ImageActivity.this.getResources(), integers[0], mWidth, mHeight);
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            addImageAsyn(imageView, bitmap);
-        }
-    }
-
-    private class ReadFileTask extends AsyncTask<String, Void, Bitmap> {
-        int mWidth = 0;
-        int mHeight = 0;
-        ImageView imageView;
-
-        ReadFileTask(int width, int height) {
-            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
-            pages.add(imageView);
-            mWidth = width;
-            mHeight = height;
-        }
-
-        @Override
-        protected Bitmap doInBackground(String... strings) {
-            return decodeBitmapFromFile(strings[0],
-                    mWidth,
-                    mHeight);
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            addImageAsyn(imageView, bitmap);
-        }
-    }
-
-    private class ReadAssetsTask extends AsyncTask<String, Void, Bitmap> {
-        int mWidth = 0;
-        int mHeight = 0;
-        ImageView imageView;
-
-        ReadAssetsTask(int width, int height) {
-            imageView = (ImageView) layoutInflater.inflate(R.layout.activity_image_item, null);
-            pages.add(imageView);
-            mWidth = width;
-            mHeight = height;
-        }
-
-        @Override
-        protected Bitmap doInBackground(String... strings) {
-            return decodeBitmapFromAssets(ImageActivity.this,
-                    strings[0],
-                    mWidth,
-                    mHeight);
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            addImageAsyn(imageView, bitmap);
-        }
     }
 
 }

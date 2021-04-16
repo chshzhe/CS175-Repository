@@ -4,7 +4,9 @@ import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.ScaleGestureDetector.OnScaleGestureListener;
@@ -18,11 +20,11 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
 
     public final float SCALE_MAX = 8.0f;
     private final int mTouchSlop;
-    private final float[] matrixValues = new float[9];
-    private final Matrix mScaleMatrix = new Matrix();
     private float initScale = 1.0f;
+    private final float[] matrixValues = new float[9];
     private boolean once = true;
-    private ScaleGestureDetector mScaleGestureDetector = null;
+    private  ScaleGestureDetector mScaleGestureDetector = null;
+    private final Matrix mScaleMatrix = new Matrix();
     private boolean isCanDrag;
 
     private boolean isCheckLeftAndRight;
@@ -36,11 +38,10 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
         super(context, attrs);
         super.setScaleType(ScaleType.MATRIX);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-        mScaleGestureDetector = new ScaleGestureDetector(context, this);
+        mScaleGestureDetector = new ScaleGestureDetector(context,this);
         this.setOnTouchListener(this);
     }
-
-    public final float getScale() {
+    public final float getScale(){
         mScaleMatrix.getValues(matrixValues);
         return matrixValues[Matrix.MSCALE_X];
     }
@@ -52,13 +53,16 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
 
         if (getDrawable() == null)
             return true;
-        if ((scale < SCALE_MAX && scaleFactor > 1.0f)
-                || (scale > initScale && scaleFactor < 1.0f)) {
+        if ((scale<SCALE_MAX && scaleFactor>1.0f)
+                ||(scale>initScale && scaleFactor<1.0f))
+        {
 
-            if (scaleFactor * scale < initScale) {
+            if (scaleFactor * scale < initScale)
+            {
                 scaleFactor = initScale / scale;
             }
-            if (scaleFactor * scale > SCALE_MAX) {
+            if (scaleFactor * scale > SCALE_MAX)
+            {
                 scaleFactor = SCALE_MAX / scale;
             }
             mScaleMatrix.postScale(scaleFactor, scaleFactor,
@@ -68,8 +72,8 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
         }
         return true;
     }
-
-    private void checkBorderAndCenterWhenScale() {
+    private void checkBorderAndCenterWhenScale()
+    {
 
         RectF rect = getMatrixRectF();
         float deltaX = 0;
@@ -77,37 +81,46 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
 
         int width = getWidth();
         int height = getHeight();
-        if (rect.width() >= width) {
-            if (rect.left > 0) {
+        if (rect.width() >= width)
+        {
+            if (rect.left > 0)
+            {
                 deltaX = -rect.left;
             }
-            if (rect.right < width) {
+            if (rect.right < width)
+            {
                 deltaX = width - rect.right;
             }
         }
-        if (rect.height() >= height) {
-            if (rect.top > 0) {
+        if (rect.height() >= height)
+        {
+            if (rect.top > 0)
+            {
                 deltaY = -rect.top;
             }
-            if (rect.bottom < height) {
+            if (rect.bottom < height)
+            {
                 deltaY = height - rect.bottom;
             }
         }
-        if (rect.width() < width) {
+        if (rect.width() < width)
+        {
             deltaX = width * 0.5f - rect.right + 0.5f * rect.width();
         }
-        if (rect.height() < height) {
+        if (rect.height() < height)
+        {
             deltaY = height * 0.5f - rect.bottom + 0.5f * rect.height();
         }
         mScaleMatrix.postTranslate(deltaX, deltaY);
 
     }
-
-    private RectF getMatrixRectF() {
+    private RectF getMatrixRectF()
+    {
         Matrix matrix = mScaleMatrix;
         RectF rect = new RectF();
         Drawable d = getDrawable();
-        if (null != d) {
+        if (null != d)
+        {
             rect.set(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
             matrix.mapRect(rect);
         }
@@ -126,24 +139,27 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
     }
 
     @Override
-    protected void onAttachedToWindow() {
+    protected void onAttachedToWindow(){
         super.onAttachedToWindow();
         getViewTreeObserver().addOnGlobalLayoutListener(this);
     }
 
     @Override
-    public boolean onTouch(View v, MotionEvent event) {
+    public boolean onTouch(View v, MotionEvent event)
+    {
         mScaleGestureDetector.onTouchEvent(event);
 
         float x = 0, y = 0;
         final int pointerCount = event.getPointerCount();
-        for (int i = 0; i < pointerCount; i++) {
+        for (int i = 0; i < pointerCount; i++)
+        {
             x += event.getX(i);
             y += event.getY(i);
         }
         x = x / pointerCount;
         y = y / pointerCount;
-        if (pointerCount != lastPointerCount) {
+        if (pointerCount != lastPointerCount)
+        {
             isCanDrag = false;
             mLastX = x;
             mLastY = y;
@@ -153,26 +169,33 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
         lastPointerCount = pointerCount;
         RectF rectF = getMatrixRectF();
 
-        switch (event.getAction()) {
+        switch (event.getAction())
+        {
             case MotionEvent.ACTION_DOWN:
-                if (rectF.width() > getWidth() || rectF.height() > getHeight()) {
+                if (rectF.width() > getWidth() || rectF.height() > getHeight())
+                {
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }
             case MotionEvent.ACTION_MOVE:
                 float dx = x - mLastX;
                 float dy = y - mLastY;
 
-                if (!isCanDrag) {
+                if (!isCanDrag)
+                {
                     isCanDrag = isCanDrag(dx, dy);
                 }
-                if (isCanDrag) {
-                    if (getDrawable() != null) {
+                if (isCanDrag)
+                {
+                    if (getDrawable() != null)
+                    {
                         isCheckLeftAndRight = isCheckTopAndBottom = true;
-                        if (rectF.width() < getWidth()) {
+                        if (rectF.width() < getWidth())
+                        {
                             dx = 0;
                             isCheckLeftAndRight = false;
                         }
-                        if (rectF.height() < getHeight()) {
+                        if (rectF.height() < getHeight())
+                        {
                             dy = 0;
                             isCheckTopAndBottom = false;
                         }
@@ -184,7 +207,8 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
                 }
                 mLastX = x;
                 mLastY = y;
-                if (rectF.width() > getWidth() || rectF.height() > getHeight()) {
+                if (rectF.width() > getWidth() || rectF.height() > getHeight())
+                {
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }
                 if (isCanDrag) {
@@ -208,38 +232,46 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
         }
 
 
+
         return true;
     }
 
-    private void checkMatrixBounds() {
+    private void checkMatrixBounds()
+    {
         RectF rect = getMatrixRectF();
 
         float deltaX = 0, deltaY = 0;
         final float viewWidth = getWidth();
         final float viewHeight = getHeight();
-        if (rect.top > 0 && isCheckTopAndBottom) {
+        if (rect.top > 0 && isCheckTopAndBottom)
+        {
             deltaY = -rect.top;
         }
-        if (rect.bottom < viewHeight && isCheckTopAndBottom) {
+        if (rect.bottom < viewHeight && isCheckTopAndBottom)
+        {
             deltaY = viewHeight - rect.bottom;
         }
-        if (rect.left > 0 && isCheckLeftAndRight) {
+        if (rect.left > 0 && isCheckLeftAndRight)
+        {
             deltaX = -rect.left;
         }
-        if (rect.right < viewWidth && isCheckLeftAndRight) {
+        if (rect.right < viewWidth && isCheckLeftAndRight)
+        {
             deltaX = viewWidth - rect.right;
         }
         mScaleMatrix.postTranslate(deltaX, deltaY);
     }
 
 
-    private boolean isCanDrag(float dx, float dy) {
+    private boolean isCanDrag(float dx, float dy)
+    {
         return Math.sqrt((dx * dx) + (dy * dy)) >= mTouchSlop;
     }
 
     @Override
     public void onGlobalLayout() {
-        if (once) {
+        if(once)
+        {
             Drawable d = getDrawable();
             if (d == null)
                 return;
@@ -248,13 +280,13 @@ public class ZoomImageView extends ImageView implements OnScaleGestureListener, 
             int dw = d.getIntrinsicWidth();
             int dh = d.getIntrinsicHeight();
             float scale = 1.0f;
-            if (dw > width && dh <= height) {
-                scale = width * 1.0f / dw;
+            if (dw > width && dh<= height){
+                scale = width*1.0f/dw;
             }
-            if (dh > height && dw <= width) {
-                scale = width * 1.0f / dh;
+            if (dh > height && dw<= width){
+                scale = width*1.0f/dh;
             }
-            if (dw > width && dh > height) {
+            if (dw > width && dh > height){
                 scale = Math.min(dw * 1.0f / width, dh * 1.0f / height);
             }
             initScale = scale;

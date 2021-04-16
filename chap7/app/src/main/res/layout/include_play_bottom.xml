@@ -8,45 +8,46 @@
     <Button
         android:id="@+id/btn_play"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:text="@string/pause"
         android:layout_centerVertical="true"
-        android:text="@string/pause" />
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="00:00/00:00"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/btn_play"
-        android:text="00:00/00:00" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  />
 
     <SeekBar
         android:id="@+id/seekBar"
+        android:layout_toRightOf="@+id/tv_time"
+        android:layout_toLeftOf="@+id/btn_setting"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/btn_setting"
-        android:layout_toRightOf="@+id/tv_time" />
+        />
 
 
     <Button
-        android:id="@+id/btn_setting"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_setting"
+        android:text="@string/smallScreen"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/btn_stop"
-        android:text="@string/smallScreen" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btn_stop"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:id="@+id/btn_stop"
+        android:text="@string/stop"
         android:layout_centerVertical="true"
-        android:text="@string/stop" />
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
