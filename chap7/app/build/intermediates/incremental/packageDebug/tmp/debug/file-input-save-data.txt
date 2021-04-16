@@ -1,0 +1,35 @@
+#Internal package file, do not edit.
+#Fri Apr 16 16:28:18 CST 2021
+7.path=lib/armeabi-v7a/libimagepipeline.so
+2.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+5.set=ASSET
+0.path=classes.dex
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+7.baseType=DIRECTORY
+2.set=NATIVE_RESOURCE
+1.path=lib/arm64-v8a/libimagepipeline.so
+4.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+7.set=NATIVE_RESOURCE
+count=8
+5.baseType=DIRECTORY
+2.path=lib/x86/libimagepipeline.so
+5.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\merged_assets\\debug\\out
+4.set=NATIVE_RESOURCE
+3.path=lib/armeabi/libimagepipeline.so
+6.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+3.baseType=DIRECTORY
+1.set=NATIVE_RESOURCE
+4.path=lib/x86_64/libimagepipeline.so
+7.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+6.set=DEX
+1.baseType=DIRECTORY
+6.baseType=DIRECTORY
+5.path=assetsimage.jpg
+0.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+0.baseType=DIRECTORY
+3.set=NATIVE_RESOURCE
+6.path=classes.dex
+1.base=C\:\\Users\\chshzhe\\Desktop\\518120910046AndroidHW6-186a0ff130d3e7d274ec29c6899fe1a62f2e6451\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+4.baseType=DIRECTORY
+0.set=DEX
