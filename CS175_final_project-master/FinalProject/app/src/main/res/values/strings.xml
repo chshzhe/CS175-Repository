@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tiktok Lite</string>
+    <!-- 点赞选中 -->
+    <string name="icon_like_fill">&#xe60d;</string>
+    <!--评论-->
+    <string name="icon_comment">&#xe621;</string>
+    <!-- 更多 -->
+    <string name="icon_more">&#xe61b;</string>
+</resources>

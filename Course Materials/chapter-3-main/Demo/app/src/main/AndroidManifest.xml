@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chapter3.demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Animation -->
+        <activity
+            android:name=".animation.MarqueeTextViewActivity"
+            android:label="@string/marquee_text_view_demo" />
+        <activity
+            android:name=".animation.RotationPropertyActivity"
+            android:label="@string/rotation_property_demo" />
+        <activity
+            android:name=".animation.ScalePropertyActivity"
+            android:label="@string/scale_property_demo" />
+        <activity
+            android:name=".animation.TransitionActivity"
+            android:label="@string/transition_activity_demo" />
+        <activity
+            android:name=".animation.LottieActivity"
+            android:label="@string/lottie_demo" />
+        <activity android:name=".animation.AnimationActivity"/>
+        <activity android:name=".animation.PropertyActivity"/>
+        <activity android:name=".animation.FrameAnimationActivity"/>
+
+        <!-- Fragment -->
+        <activity
+            android:name=".fragment.ViewPagerCommunicationActivity"
+            android:label="@string/fragment_communication_demo" />
+        <activity
+            android:name=".fragment.ViewPagerActivity"
+            android:label="@string/fragment_view_pager_demo" />
+        <activity
+            android:name=".fragment.ViewPagerWithTabActivity"
+            android:label="@string/fragment_view_pager_demo" />
+        <activity
+            android:name=".fragment.StaticColorActivity"
+            android:label="@string/fragment_arguments_demo" />
+        <activity
+            android:name=".fragment.DynamicAddFragmentActivity"
+            android:label="@string/fragment_dynamic_demo" />
+        <activity
+            android:name=".fragment.LifecycleFragmentActivity"
+            android:label="@string/fragment_lifecycle_demo" />
+        <activity android:name=".fragment.masterdetail.ItemsListActivity" />
+        <activity android:name=".fragment.masterdetail.ItemDetailActivity" />
+    </application>
+
+</manifest>

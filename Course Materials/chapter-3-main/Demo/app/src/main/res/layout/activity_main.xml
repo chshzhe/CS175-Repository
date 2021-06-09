@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btn_marquee_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/marquee_text_view_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_show_animation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/animation"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_rotation_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rotation_property_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_scale_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scale_property_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_transition_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transition_activity_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_frame_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/frame_animation"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_lottie_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lottie_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_fragment_lifecycle_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_lifecycle_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_fragment_add_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_dynamic_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_fragment_arguments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_arguments_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_pager_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_view_pager_with_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_pager_strip_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_fragment_communication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_communication_demo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_master_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_master_detail_demo"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

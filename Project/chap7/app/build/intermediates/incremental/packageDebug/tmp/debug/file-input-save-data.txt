@@ -1,0 +1,35 @@
+#Internal package file, do not edit.
+#Sun May 09 08:59:56 CST 2021
+3.set=NATIVE_RESOURCE
+3.path=lib/x86/libimagepipeline.so
+2.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\merged_assets\\debug\\out
+0.path=lib/arm64-v8a/libimagepipeline.so
+5.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+6.baseType=DIRECTORY
+0.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+3.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+6.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+5.path=lib/armeabi-v7a/libimagepipeline.so
+3.baseType=DIRECTORY
+1.path=classes.dex
+4.set=DEX
+0.baseType=DIRECTORY
+0.set=NATIVE_RESOURCE
+5.baseType=DIRECTORY
+6.set=NATIVE_RESOURCE
+4.path=classes.dex
+count=8
+5.set=NATIVE_RESOURCE
+7.path=lib/x86_64/libimagepipeline.so
+1.set=DEX
+2.path=assetsimage.jpg
+2.baseType=DIRECTORY
+2.set=ASSET
+7.baseType=DIRECTORY
+1.baseType=DIRECTORY
+7.set=NATIVE_RESOURCE
+7.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+4.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+1.base=D\:\\Android Project\\Project\\chap7\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+4.baseType=DIRECTORY
+6.path=lib/armeabi/libimagepipeline.so

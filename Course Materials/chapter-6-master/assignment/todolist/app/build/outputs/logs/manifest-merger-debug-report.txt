@@ -1,0 +1,188 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/509f8e096b79b64333f5930fbba81030/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4a552e46dfc588fa6e29a1bfd6671c99/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8eacf5594387ac492eb315b8b18bd3aa/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a52b48286d2633254ea0d1fb33ffc746/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/651cd7269f752986fe063cc38df798ea/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/477b50b37a531a703249977dc2cde0bc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/b97b9442a468bbe6cf7dc7eefa153995/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3fb0d8c1d27d5ed8c4680e4da00c535c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9bf96bf23485f03f9d35cb4064ee1cdb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/834d04f85ce0a4a1c710aa48015b6ec5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1981ef02a80dcf8f65e6cde39aab9295/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/2997fd9ba438f27da2987fb96a35f714/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1944816d06c717c6434f68d5aebf78af/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/e85f94460bc8c92e772ff6b8446026df/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9a2bb584ab96e8bf8b0a52923691ee18/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/518da973ce157eeed4a37a13b32ea4b7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/d349876ae2b7700fbe164520cfcb3689/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/72a40440d6f115fa44bc90c6a7bc1a2a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3aacd8b1140714a4a2afd008d2dac939/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/c278e8ef6641bdfc42cd174243d0ab89/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/84a4b92d8af5679cdb9d489d2984e677/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4253fb95b487ea55742f1b3d344b8f9d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/471c98cb207279c4a026e94e01f8c027/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/24e92546b472b6f86b9c143676f2a3a7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a6620f86a55f82e0d92202fbaa2ddf73/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8a559099ce30fdccb029baa71e782bf0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9c1ec84621249ce0e7642b0ea2c3c486/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/082b994ed412c2fdc03d1c85a107694e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/083c72e53356539a94313ab99a7e036c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9d874eff6b9647fd2cc846c646f99511/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:4:5-38
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:6:22-78
+application
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:8:5-28:19
+MERGED from [com.android.support:design:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/509f8e096b79b64333f5930fbba81030/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/509f8e096b79b64333f5930fbba81030/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8eacf5594387ac492eb315b8b18bd3aa/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8eacf5594387ac492eb315b8b18bd3aa/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3aacd8b1140714a4a2afd008d2dac939/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3aacd8b1140714a4a2afd008d2dac939/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:11:9-41
+	tools:ignore
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:15:9-48
+	android:roundIcon
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.byted.camp.todolist.MainActivity
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:16:9-25:20
+	android:label
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:18:13-45
+	android:theme
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:19:13-56
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:17:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.byted.camp.todolist.debug.DebugActivity
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:26:9-57
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:26:19-54
+activity#com.byted.camp.todolist.NoteActivity
+ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:27:9-50
+	android:name
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml:27:19-47
+uses-sdk
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/509f8e096b79b64333f5930fbba81030/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/509f8e096b79b64333f5930fbba81030/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4a552e46dfc588fa6e29a1bfd6671c99/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4a552e46dfc588fa6e29a1bfd6671c99/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8eacf5594387ac492eb315b8b18bd3aa/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8eacf5594387ac492eb315b8b18bd3aa/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a52b48286d2633254ea0d1fb33ffc746/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a52b48286d2633254ea0d1fb33ffc746/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/651cd7269f752986fe063cc38df798ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/651cd7269f752986fe063cc38df798ea/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/477b50b37a531a703249977dc2cde0bc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/477b50b37a531a703249977dc2cde0bc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/b97b9442a468bbe6cf7dc7eefa153995/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/b97b9442a468bbe6cf7dc7eefa153995/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3fb0d8c1d27d5ed8c4680e4da00c535c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3fb0d8c1d27d5ed8c4680e4da00c535c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9bf96bf23485f03f9d35cb4064ee1cdb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9bf96bf23485f03f9d35cb4064ee1cdb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/834d04f85ce0a4a1c710aa48015b6ec5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/834d04f85ce0a4a1c710aa48015b6ec5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1981ef02a80dcf8f65e6cde39aab9295/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1981ef02a80dcf8f65e6cde39aab9295/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/2997fd9ba438f27da2987fb96a35f714/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/2997fd9ba438f27da2987fb96a35f714/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1944816d06c717c6434f68d5aebf78af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/1944816d06c717c6434f68d5aebf78af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/e85f94460bc8c92e772ff6b8446026df/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/e85f94460bc8c92e772ff6b8446026df/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9a2bb584ab96e8bf8b0a52923691ee18/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9a2bb584ab96e8bf8b0a52923691ee18/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/518da973ce157eeed4a37a13b32ea4b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/518da973ce157eeed4a37a13b32ea4b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/d349876ae2b7700fbe164520cfcb3689/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/d349876ae2b7700fbe164520cfcb3689/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/72a40440d6f115fa44bc90c6a7bc1a2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/72a40440d6f115fa44bc90c6a7bc1a2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3bee29726e13f5eb1d7d73fb549b6f2b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3aacd8b1140714a4a2afd008d2dac939/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/3aacd8b1140714a4a2afd008d2dac939/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/c278e8ef6641bdfc42cd174243d0ab89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/c278e8ef6641bdfc42cd174243d0ab89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/84a4b92d8af5679cdb9d489d2984e677/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/84a4b92d8af5679cdb9d489d2984e677/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4253fb95b487ea55742f1b3d344b8f9d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/4253fb95b487ea55742f1b3d344b8f9d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/471c98cb207279c4a026e94e01f8c027/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/471c98cb207279c4a026e94e01f8c027/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/24e92546b472b6f86b9c143676f2a3a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/24e92546b472b6f86b9c143676f2a3a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a6620f86a55f82e0d92202fbaa2ddf73/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/a6620f86a55f82e0d92202fbaa2ddf73/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8a559099ce30fdccb029baa71e782bf0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/8a559099ce30fdccb029baa71e782bf0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9c1ec84621249ce0e7642b0ea2c3c486/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9c1ec84621249ce0e7642b0ea2c3c486/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/082b994ed412c2fdc03d1c85a107694e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/082b994ed412c2fdc03d1c85a107694e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/083c72e53356539a94313ab99a7e036c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/083c72e53356539a94313ab99a7e036c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9d874eff6b9647fd2cc846c646f99511/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/wuxiangyucc/.gradle/caches/transforms-2/files-2.1/9d874eff6b9647fd2cc846c646f99511/AndroidManifest.xml:20:5-44
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		ADDED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuxiangyucc/Project/AndroidStudioProjects/chapter-6/assignment/todolist/app/src/main/AndroidManifest.xml

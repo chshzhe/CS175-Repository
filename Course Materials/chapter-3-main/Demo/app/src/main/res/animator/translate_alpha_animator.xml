@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="sequentially">
+    <objectAnimator android:propertyName="alpha" android:valueTo="0"/>
+    <objectAnimator android:propertyName="translationX" android:valueTo="800"/>
+    <objectAnimator android:propertyName="rotation" android:valueFrom="0" android:valueTo="360"/>
+</set>
+
+
